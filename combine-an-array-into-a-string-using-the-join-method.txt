@@ -1,0 +1,18 @@
+function sentensify(str) {
+  // Only change code below this line
+  let output = 
+  str
+  .split('-').toString()
+  .split('.').toString()
+  .split(',');
+
+  output = output.join(' ');
+
+  console.log(output);
+
+  return output;
+
+  // Only change code above this line
+}
+
+sentensify("May-the-force-be-with-you");

@@ -1,0 +1,24 @@
+function splitify(str) {
+  // Only change code below this line
+  // let output = str
+  // .split(' ').toString()
+  // .split(',').toString()
+  // .split('-').toString()
+  // .split('.').toString()
+  // .split(',');
+  // console.log(output);
+  // return output;
+
+  let output = str
+  .split(' ').toString()
+  .split(',').toString()
+  .split('-').toString()
+  .split('.').toString()
+  .split(',');
+  console.log(output);
+  return output;
+
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");

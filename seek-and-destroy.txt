@@ -1,0 +1,24 @@
+function destroyer(...arr) { 
+
+  // Extract first array   
+  let arrWorking = arr[0];
+
+  // Extract the rest of the array
+  let toFind = arr.slice(1);
+
+  // Declare output value
+  let output = [];
+  
+  // Perform search
+  arrWorking.map((item) => {
+    if(!toFind.includes(item))
+    {
+      output.push(item);
+    }
+  })
+
+  // Return result
+  return output;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);

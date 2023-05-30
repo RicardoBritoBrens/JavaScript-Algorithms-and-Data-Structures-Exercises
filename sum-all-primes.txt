@@ -1,0 +1,32 @@
+function sumPrimes(num) {
+
+  let output = [];
+  let rangeNumber = [];  
+
+  for(let i = 2; i <= num; i++){  
+    rangeNumber.push(i);       
+  }
+
+
+   let primeCounter = 0;
+    for(let z = 0; z <= rangeNumber.length; z++){
+       let number = rangeNumber[z];
+       primeCounter = 0;
+
+       for(let b = 1; b <= num; b++){
+         if(number % b == 0 && number % number == 0){
+            primeCounter++;        
+          }            
+        }
+
+      if(primeCounter==2){
+        console.log('es primo');
+        output.push(number);       
+      }
+    }
+
+  
+  return output.reduce((a,b) => a + b);
+}
+
+sumPrimes(977);

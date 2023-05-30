@@ -1,0 +1,26 @@
+function diffArray(arr1, arr2) {
+
+  let first = arr1.slice();
+  let second = arr2.slice();
+  let output = [];  
+
+  first.map((item) => {
+    if(!second.includes(item))
+    {
+      output.push(item);
+    }
+  });
+
+  second.map((item) => {
+    if(!first.includes(item))
+    {
+      output.push(item);
+    }
+  });
+
+  console.log(output);
+
+  return output;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);

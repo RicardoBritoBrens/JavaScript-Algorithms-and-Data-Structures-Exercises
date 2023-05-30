@@ -1,0 +1,20 @@
+function bouncer(arr) {
+
+  let newArray = arr.slice();
+
+  let result = [];
+
+  let falsesInJavaScript = [false, null, 0, "", undefined, NaN];
+
+  for(let i = 0; i < newArray.length; i++){
+    
+   if(!falsesInJavaScript.includes(newArray[i]))
+   {
+     result.push(newArray[i]);
+   }
+   
+  }  
+  return result;
+}
+
+bouncer([7, "ate", "", false, 9]);

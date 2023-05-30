@@ -1,0 +1,14 @@
+function mutation(arr) {
+  let first = arr[0].split('').map(word => { return word.toLowerCase(); 
+  });
+  let second = arr[1].split('').map(word => { return word.toLowerCase(); 
+  });
+  let count = 0;
+     for(let z = 0; z < second.length; z++){ 
+       if(first.indexOf(second[z].toLowerCase()) != -1){        
+          count++;        
+       }
+    }
+  return count == second.length;
+}
+mutation(["hello", "hey"]);

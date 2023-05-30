@@ -1,0 +1,16 @@
+const squareList = arr => {
+  // Only change code below this line
+
+  return arr
+  .filter(x => x % 1 === 0)
+  .filter(x => x > 0)
+  .map((obj, number) => {
+  
+    console.log(`Object: ${obj}, Number: ${number}`)
+    return Math.pow(obj, 2);
+  },0);
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);

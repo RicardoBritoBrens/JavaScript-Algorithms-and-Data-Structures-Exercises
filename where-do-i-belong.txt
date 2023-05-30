@@ -1,0 +1,28 @@
+function getIndexToIns(arr, num) {
+
+  let indexToInsert = 0;
+
+  let currentArray = arr.slice();
+
+  let sortedArray = currentArray.sort((a,b)=> (a-b));
+
+  console.log(sortedArray);
+
+  for(let i = 0; i < sortedArray.length; i++){
+    if(num != sortedArray[i] && num >= sortedArray[i] && num <= sortedArray[i + 1]){
+      console.log('is different');
+      indexToInsert = i+1;
+      break;
+    }else if(num == sortedArray[i] && num >= sortedArray[i] && num <= sortedArray[i + 1]){
+               console.log('is equal');               
+      indexToInsert = i;
+      break;
+    }else if(i + 1 == sortedArray.length){
+      indexToInsert = i + 1;               
+    }
+  }
+  console.log(indexToInsert);
+  return indexToInsert;
+}
+
+getIndexToIns([2, 5, 10], 15);

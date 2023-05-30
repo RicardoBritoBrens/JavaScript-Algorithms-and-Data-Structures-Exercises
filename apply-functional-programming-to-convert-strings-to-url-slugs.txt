@@ -1,0 +1,29 @@
+// Only change code below this line
+function urlSlug(title) {
+ 
+  // Create array of all values.
+  let arrayOfInput = title.split(' ');
+
+  // Get only the values without empty space.
+  let arrayOfInputWithoutEmptySpaces =
+    arrayOfInput.filter(x => x !== '');
+
+  // Convert to lowerCase.
+  let arrayOfInputWithoutEmptySpacesAndLowerCase =
+  arrayOfInputWithoutEmptySpaces.map(x => x.toLowerCase());
+
+  // Concat with symbol -.
+  let output = arrayOfInputWithoutEmptySpacesAndLowerCase.reduce((acumulator, currentValue) => {
+
+    return acumulator.concat('-').concat(currentValue). toLowerCase();
+
+  });
+
+  // Test output.
+  console.log(output);
+
+return output;
+
+}
+// Only change code above this line
+urlSlug(" A Mind Needs Books    Like A Sword Needs A Whetstone");

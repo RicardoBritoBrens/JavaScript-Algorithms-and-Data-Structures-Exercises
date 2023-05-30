@@ -1,0 +1,20 @@
+function titleCase(str) {
+  let result = "";
+  let split = str.split(' ');
+  for(let i = 0; i < split.length; i++)
+  {
+    let newWord = '';
+    for(let z = 0; z < split[i].length; z++){
+        if(z == 0){
+          newWord = newWord + split[i][z].toUpperCase();
+        }else{
+          newWord = newWord + split[i][z].toLowerCase();
+        }
+    }
+    result = result + newWord + ' ';
+  }
+  console.log(result = result.replace('/^\s*|\s*$/gm', ''));
+  return result.trim();
+}
+
+titleCase("I'm a little tea pot");

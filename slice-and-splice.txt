@@ -1,0 +1,17 @@
+function frankenSplice(arr1, arr2, n) {
+
+// El método splice() cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
+
+// El método slice() devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). El array original no se modificará.
+
+let firstArray = arr1.slice();
+let secondArray = arr2.slice();
+
+for(let i = firstArray.length - 1; i >= 0; i--){
+  secondArray.splice(n,firstArray, firstArray[i]);    
+}
+
+  return secondArray;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);

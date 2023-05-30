@@ -1,0 +1,32 @@
+function sumAll(arr) {
+
+   // Create a copy to avoid future errors
+   let currentArray = arr.slice();
+
+   // Sort the array to get the appropiate first number
+   currentArray.sort((a,b)=> a-b);
+ 
+   // Determine start and ending range
+   let first = 0;
+   let last = 0;
+   if(currentArray[0] > currentArray[1]){
+     first = currentArray[0];
+     last = currentArray[1];
+   }else{
+     last = currentArray[1];
+     first = currentArray[0];
+   }
+
+   // Iterate over the range to get all the numbers between them
+   let output = 0;
+   let numbers = [];  
+   for(let i = first; i <= last; i++){     
+     numbers.push(i);   
+   }
+
+   numbers.forEach(x => {output = output + x});
+
+  return output;
+}
+
+sumAll([1, 4]);

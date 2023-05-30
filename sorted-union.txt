@@ -1,0 +1,16 @@
+function uniteUnique(...arr) {
+
+  let output = [];
+
+  arr.slice().map((array, index)=> {    
+    for(let i = 0; i < array.length; i++){      
+      if(!output.includes(array[i])){
+        output.push(array[i])        
+      }
+    }    
+  });
+  
+  return output;
+}
+
+uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]);

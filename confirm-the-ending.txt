@@ -1,0 +1,18 @@
+function confirmEnding(str, target) {
+
+  let lengthStr = str.length;
+  
+  let lengthTarget = target.length;
+
+  console.log(`Tamaño de string a evaluar: ${lengthStr}`);
+
+  console.log(`Tamaño de string a buscar al final: ${lengthTarget}`);  
+
+  let endingCharacter = str.substring(lengthStr, lengthStr - lengthTarget);
+
+  console.log(`Final de palabra es: ${endingCharacter}`);
+
+  return endingCharacter == target ? true: false   
+}
+
+confirmEnding("Bastian", "n");

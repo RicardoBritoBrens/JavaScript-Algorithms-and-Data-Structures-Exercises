@@ -1,0 +1,25 @@
+function getIndexToIns(arr, num) {
+
+  let indexToInsert = 0;
+
+  let currentArray = arr.slice();
+
+  let sortedArray = currentArray.sort((a,b) => (a-b));
+
+  for(let i = 0; i < sortedArray.length; i++)
+  {
+    if(num <= sortedArray[i])
+    {
+      indexToInsert = i;
+      break;
+    }
+    else if(sortedArray.length - 1 == i){
+      indexToInsert = sortedArray.length;
+      break;
+    }
+  }
+  
+  return indexToInsert;
+}
+
+getIndexToIns([2, 5, 10], 15);
