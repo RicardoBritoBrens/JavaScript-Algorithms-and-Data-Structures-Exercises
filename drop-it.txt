@@ -1,0 +1,18 @@
+function dropElements(arr, func) {
+
+  let copy = arr.slice();
+
+  let index = 0;
+
+  while(!func(arr[index]))
+  {
+    index++;
+    copy.shift();     
+  }
+
+  console.log(copy);
+
+  return copy;
+}
+
+dropElements([1, 2, 3], function(n) {return n > 0;}) 
